@@ -10,6 +10,8 @@ function App() {
 
   const inputRef = useRef()
 
+  const hour = new Date().getHours()
+
   async function searchCity(){
     const language = "pt_br"
     const units = "metric"
@@ -22,11 +24,19 @@ function App() {
     const responseData5Days = await axios.get(url5Days)
     setData(responseData.data)
     setData5Days(responseData5Days.data)
-    
+  }
+
+  function colorizer(){
+    if (hour < 6 || hour >= 18){
+      document.body.style.background = "linear-gradient(to right, #361a68, #2b4879)"
+    } else {
+      document.body.style.background = "linear-gradient(to right, #73cf3e, #addb1f)"
+    }
   }
 
   return (
     <>
+      {colorizer()}
       <div className='container'>
         <h1>Previsão do Tempo</h1>
         <input ref={inputRef} type='text' placeholder='Digite o nome da cidade'/>

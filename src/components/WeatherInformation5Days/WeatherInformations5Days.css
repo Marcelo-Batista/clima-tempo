@@ -1,6 +1,6 @@
 .forecast-container{
     min-width: 300px;
-    background: linear-gradient(to bottom, rgba(122, 255, 114, 0.5), rgba(0, 98, 34, 0.1));
+    background: linear-gradient(to bottom, #1e797b94, #28a56b4e);
     border-radius: 10px;
     padding: 20px;
     margin: 20px;
@@ -18,7 +18,7 @@
     text-align: center;
     text-transform: capitalize;
     font-size: 0.9rem;
-    background-color: rgba(122, 255, 114, 0.2);
+    background-color: #1e797b63;
     padding:10px;
     width: 120px;
     margin: 5px;
